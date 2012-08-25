@@ -14,8 +14,9 @@
 		<script src="vendor/backbone.js" type="text/javascript"></script>
         
         <script src="js/app.js" type="text/javascript"></script>
+        <script src="js/models/event.js" type="text/javascript"></script>
         <script src="js/views/home.js" type="text/javascript"></script>
-        <script src="js/views/helloworld.js" type="text/javascript"></script>
+        <script src="js/views/eventdetail.js" type="text/javascript"></script>
         
     </head> 
     <body> 
@@ -23,29 +24,20 @@
         <div data-role="page" id="home">
             <div data-role="header">
                 <h1>Events</h1>
+                <a href="index.html" data-icon="plus" class="ui-btn-right" id="addEvent">Add</a>
             </div>
             <div class="nav">
             </div>
         </div>
         
         
-        
-        <div data-role="page" id="page1" data-add-back-btn="true">
+        <div data-role="page" id="eventDetail" data-add-back-btn="true">
             <div data-role="header">
                 <h1>Hello</h1>
             </div>
             <div data-role="content">
-                <h1>Say Hello!</h1>
-                <div id='helloWorldInput'>
-                    <label for="txtName">Enter your name:</label>
-                    <input type="text" id="txtName" value="" />
-                </div>
-                <div id='helloWorldText' style="display:block;"></div>
-                <div align="center">
-                    <div data-role="controlgroup" data-type="horizontal">
-                        <button data-icon="delete" id="sayHelloReset">Reset</button>
-                        <button data-theme="a" id="sayHello">Submit</button>
-                    </div>
+                DETAILS
+                <div id="eventTitle">
                 </div>
             </div>
         </div>

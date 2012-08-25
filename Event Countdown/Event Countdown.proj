@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>4ed25f47-19cb-42dd-8f12-e8f755bc8bbf</ProjectGuid>
     <ProjectTypeGuids>{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}</ProjectTypeGuids>
-    <AppIdentifier>com.telerik.Event_Countdown</AppIdentifier>
+    <AppIdentifier>com.srtsolutions.Event_Countdown</AppIdentifier>
     <ProjectName>Event Countdown</ProjectName>
     <IsRunnable>true</IsRunnable>
     <TemplateAppName>Cordova200</TemplateAppName>
@@ -28,7 +28,6 @@
     <Folder Include="App_Resources\Android\drawable-ldpi">
       <Platform>Android</Platform>
     </Folder>
-    <Folder Include="js\models" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="App_Resources\iOS\icon.png" />
@@ -63,7 +62,8 @@
     <Content Include="jquery-mobile\jquery.mobile-1.1.0.min.css" />
     <Content Include="jquery-mobile\jquery.mobile-1.1.0.min.js" />
     <Content Include="js\app.js" />
-    <Content Include="js\views\HelloWorld.js" />
+    <Content Include="js\models\Event.js" />
+    <Content Include="js\views\EventDetail.js" />
     <Content Include="js\views\Home.js" />
     <Content Include="styles\main.css" />
     <Content Include="cordova.ios.js">
