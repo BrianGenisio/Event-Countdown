@@ -28,6 +28,7 @@
     <Folder Include="App_Resources\Android\drawable-ldpi">
       <Platform>Android</Platform>
     </Folder>
+    <Folder Include="js\models" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="App_Resources\iOS\icon.png" />
@@ -61,7 +62,9 @@
     <Content Include="jquery-mobile\jquery-1.7.2.min.js" />
     <Content Include="jquery-mobile\jquery.mobile-1.1.0.min.css" />
     <Content Include="jquery-mobile\jquery.mobile-1.1.0.min.js" />
-    <Content Include="js\hello-world.js" />
+    <Content Include="js\app.js" />
+    <Content Include="js\views\HelloWorld.js" />
+    <Content Include="js\views\Home.js" />
     <Content Include="styles\main.css" />
     <Content Include="cordova.ios.js">
       <Platform>iOS</Platform>
@@ -71,6 +74,8 @@
       <Platform>Android</Platform>
       <TargetName>cordova.js</TargetName>
     </Content>
+    <Content Include="vendor\backbone.js" />
+    <Content Include="vendor\underscore.js" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Telerik\ICE\Tools\Mobile\MobileTools.targets" />
 </Project>
