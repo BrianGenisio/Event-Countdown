@@ -26,7 +26,7 @@ App.Views.Home = Backbone.View.extend({
     },
     
     addEvent: function() {
-    	   
+    	  
     },
     
     selectItem: function(e) {

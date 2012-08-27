@@ -65,6 +65,7 @@
     <Content Include="js\models\Event.js" />
     <Content Include="js\views\EventDetail.js" />
     <Content Include="js\views\Home.js" />
+    <Content Include="js\views\NewEvent.js" />
     <Content Include="styles\main.css" />
     <Content Include="cordova.ios.js">
       <Platform>iOS</Platform>

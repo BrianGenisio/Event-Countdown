@@ -16,6 +16,7 @@ var onDeviceReady = function() {
 	homeView.render();
     
     var eventDetailView = new App.Views.EventDetail({el: $('#eventDetail')});
+    var newEventView = new App.Views.NewEvent({el: $('#newEvent')});
     
 }
     
