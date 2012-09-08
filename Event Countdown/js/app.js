@@ -12,13 +12,14 @@ _.each([Backbone.Model, Backbone.Collection, Backbone.View, Backbone.Router],
 
 var onDeviceReady = function() {
     var model = new App.Collections.Events();
-	var homeView = new App.Views.Home({model: model, el: $('#home')});
-	homeView.render();
+    var homeView = new App.Views.Home({model: model, el: $('#home')});
+    homeView.render();
+    
     
     var eventDetailView = new App.Views.EventDetail({el: $('#eventDetail')});
     var newEventView = new App.Views.NewEvent({el: $('#newEvent'), collection: model});
     
     model.fetch();
 }
-    
+
 document.addEventListener("deviceready", onDeviceReady, false);
