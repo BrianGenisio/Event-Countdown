@@ -3,5 +3,6 @@ App.Models.Event = Backbone.Model.extend({
 });
 
 App.Collections.Events = Backbone.Collection.extend({
-    model: App.Models.Event 
+    model: App.Models.Event,
+    localStorage: new Backbone.LocalStorage("SomeCollection")
 });

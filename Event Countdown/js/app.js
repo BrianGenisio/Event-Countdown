@@ -11,13 +11,14 @@ _.each([Backbone.Model, Backbone.Collection, Backbone.View, Backbone.Router],
        function (klass) { klass.prototype.event_aggregator = event_aggregator; });
 
 var onDeviceReady = function() {
-    var model = new App.Collections.Events([{id: 0, title: 'My Birthday'}]);
+    var model = new App.Collections.Events();
 	var homeView = new App.Views.Home({model: model, el: $('#home')});
 	homeView.render();
     
     var eventDetailView = new App.Views.EventDetail({el: $('#eventDetail')});
-    var newEventView = new App.Views.NewEvent({el: $('#newEvent')});
+    var newEventView = new App.Views.NewEvent({el: $('#newEvent'), collection: model});
     
+    model.fetch();
 }
     
 document.addEventListener("deviceready", onDeviceReady, false);

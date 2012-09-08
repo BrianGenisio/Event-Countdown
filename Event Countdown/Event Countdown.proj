@@ -76,6 +76,7 @@
       <TargetName>cordova.js</TargetName>
     </Content>
     <Content Include="vendor\backbone.js" />
+    <Content Include="vendor\backbone.localstorage.js" />
     <Content Include="vendor\underscore.js" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Telerik\ICE\Tools\Mobile\MobileTools.targets" />

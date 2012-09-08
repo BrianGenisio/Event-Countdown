@@ -6,15 +6,17 @@ App.Views.Home = Backbone.View.extend({
     
     events: {
         "click #addEvent": "addEvent",
-        "click .eventItem": "selectItem"
+        "click li": "selectItem"
     },
     
     initialize: function() {
-        _.bindAll(this, "renderItem");
+        _.bindAll(this, "renderItem", "render");
+        this.model.bind("reset", this.render);
+        this.model.bind("add", this.render);
     },
     
     render: function() {
-        $('.nav', this.el).append(this.template());
+        $('.nav', this.el).html(this.template());
         this.model.each(this.renderItem);
         this.$el.trigger('create');
         return this;
@@ -30,7 +32,8 @@ App.Views.Home = Backbone.View.extend({
     },
     
     selectItem: function(e) {
-        var id = parseFloat($(e.target).attr("data-id"));
+        console.log("selectItem");
+        var id = $(e.target).attr("data-id");
         var model = this.model.get(id);
         
         this.event_aggregator.trigger("selectEvent", model);
