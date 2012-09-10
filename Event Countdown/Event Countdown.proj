@@ -58,9 +58,13 @@
     <Content Include="jquery-mobile\images\icons-18-white.png" />
     <Content Include="jquery-mobile\images\icons-36-black.png" />
     <Content Include="jquery-mobile\images\icons-36-white.png" />
+    <Content Include="jquery-mobile\jqm-datebox.core.min.js" />
+    <Content Include="jquery-mobile\jqm-datebox.min.css" />
+    <Content Include="jquery-mobile\jqm-datebox.mode.calbox.min.js" />
     <Content Include="jquery-mobile\jquery-1.7.2.min.js" />
     <Content Include="jquery-mobile\jquery.mobile-1.1.0.min.css" />
     <Content Include="jquery-mobile\jquery.mobile-1.1.0.min.js" />
+    <Content Include="jquery-mobile\jquery.mobile.datebox.i18n.en_US.utf8.js" />
     <Content Include="js\app.js" />
     <Content Include="js\models\Event.js" />
     <Content Include="js\views\EventDetail.js" />
