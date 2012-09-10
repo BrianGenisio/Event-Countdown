@@ -39,11 +39,11 @@
         
         <div data-role="page" id="eventDetail" data-add-back-btn="true">
             <div data-role="header">
-                <h1>Hello</h1>
+                <h1><span id="eventTitle"></span></h1>
+                <a href="#home" data-role="button" data-icon="minus" class="ui-btn-right" id="removeEvent" data-transition="slide" data-direction="reverse">Remove</a>
             </div>
             <div data-role="content">
                 DETAILS
-                <div>Title: <span id="eventTitle"></span></div>
                 <div>Type: <span id="eventType"></span></div>
                 <div>Date: <span id="eventDate"></span></div>
             </div>

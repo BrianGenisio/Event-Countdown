@@ -13,6 +13,7 @@ App.Views.Home = Backbone.View.extend({
         _.bindAll(this, "renderItem", "render");
         this.model.bind("reset", this.render);
         this.model.bind("add", this.render);
+        this.model.bind("remove", this.render);
     },
     
     render: function() {
