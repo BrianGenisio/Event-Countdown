@@ -5,9 +5,17 @@ App.Views.NewEvent = Backbone.View.extend({
     },
     
     initialize: function(options) {
-        this.collection = options.collection;  
+        this.collection = options.collection; 
+        
+        _.bindAll(this, "pageShown");
+        
+        $(document).on("pageshow", '[data-role=page]', this.pageShown);
     },
-      
+   
+    pageShown: function(e, ui) {
+        this.$("form").each(function(){this.reset();});
+    },
+    
     save: function() {
         var data = {
             title: this.$("#input-title").val(),
