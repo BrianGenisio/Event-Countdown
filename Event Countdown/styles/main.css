@@ -1,4 +1,4 @@
-﻿body
+body
 {
     margin-left: 4px;
     margin-right: 4px;
@@ -17,4 +17,8 @@
 #map_canvas
 {
     text-align:center;
+}
+
+#home .eventItem .date {
+    color: #AAA;
 }

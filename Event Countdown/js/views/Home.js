@@ -4,11 +4,6 @@ App.Templates.HomeList = '<ul data-role="listview"></ul>';
 App.Views.Home = Backbone.View.extend({   
     template: _.template(App.Templates.HomeList),
     
-    events: {
-        "click #addEvent": "addEvent",
-        "click li": "selectItem"
-    },
-    
     initialize: function() {
         _.bindAll(this, "renderItem", "render");
         this.model.bind("reset", this.render);
@@ -26,32 +21,44 @@ App.Views.Home = Backbone.View.extend({
     renderItem: function(item) {
     	var newView = new App.Views.HomeItem({model: item});
         $('.nav ul', this.el).append(newView.render().el);
-    },
-    
-    addEvent: function() {
-    	  
-    },
-    
-    selectItem: function(e) {
-        console.log("selectItem");
-        var id = $(e.target).attr("data-id");
-        var model = this.model.get(id);
-        
-        this.event_aggregator.trigger("selectEvent", model);
     }
     
 });
 
 
 
-App.Templates.HomeItem = '<a href="#eventDetail" data-transition="slide" class="eventItem" data-id="<%= id %>"><%= title %></a>';
+App.Templates.HomeItem = '<a href="#eventDetail" data-transition="slide" class="eventItem" data-id="<%= id %>">' +
+                            '<div class="title"><%= title %></div>' +
+                            '<div class="date"><%= daysAway %></div>' +
+                         '</a>';
 
 App.Views.HomeItem = Backbone.View.extend({
     tagName: 'li',
     template: _.template(App.Templates.HomeItem),
     
+    events: {
+        "click": "selected"
+    },
+    
+    dateDisplay: function() {
+        var daysAway = this.model.daysAway();
+        var daysString = Math.abs(daysAway) > 1 ? "days" : "day";
+        
+        if(daysAway < 0) return Math.abs(daysAway) + " " + daysString + " ago";
+        if(daysAway == 0) return "today";
+        return daysAway + " " + daysString + " away";
+    },
+    
     render: function() {
-        this.$el.append(this.template(this.model.toJSON()));
+        var data = this.model.toJSON();
+        data.daysAway = this.dateDisplay();
+        
+        this.$el.append(this.template(data));
+        
         return this;
+    },
+    
+    selected: function() {
+        this.event_aggregator.trigger("selectEvent", this.model);
     }
 });
