@@ -43,9 +43,16 @@
                 <a href="#home" data-role="button" data-icon="minus" class="ui-btn-right" id="removeEvent" data-transition="slide" data-direction="reverse">Remove</a>
             </div>
             <div data-role="content">
-                DETAILS
-                <div>Type: <span id="eventType"></span></div>
-                <div>Date: <span id="eventDate"></span></div>
+                <h2>
+                    <span id="detail-header"></span> on <span id="event-date"></span>
+                </h2>
+                <div id="event-has-past">This event has passed</div>
+                <div class="report">
+                    <div><span id="days-away"></span> days away</div>
+                    <div><span id="hours-away"></span> hours away</div>
+                    <div><span id="minutes-away"></span> minutes away</div>
+                    <div><span id="seconds-away"></span> seconds away</div>
+                </div>
             </div>
         </div>
         

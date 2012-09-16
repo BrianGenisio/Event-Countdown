@@ -22,3 +22,16 @@ body
 #home .eventItem .date {
     color: #AAA;
 }
+
+#eventDetail .report {
+    font-size: 24px;
+}
+
+#eventDetail .report span {
+ 	font-weight: bold;   
+}
+
+#event-has-past {
+    font-size: 20px;
+ 	color: #AAA;   
+}
