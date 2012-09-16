@@ -7,8 +7,8 @@ App.Views.EventDetail = Backbone.View.extend({
     initialize: function(options) {
         this.collection = options.collection;
         
-        _.bindAll(this, "updateModel");
-     	this.event_aggregator.bind("selectEvent", this.updateModel);  
+        _.bindAll(this, "updateModel", "render");
+     	this.event_aggregator.bind("selectEvent", this.updateModel);
     },
     
     getHeader: function() {
@@ -30,6 +30,9 @@ App.Views.EventDetail = Backbone.View.extend({
         this.$("#minutes-away").html(this.model.minutesAway());
         this.$("#seconds-away").html(this.model.secondsAway());
         this.$("#event-has-past").toggle(this.model.msAway() < 0);
+        
+        setTimeout(this.render, 1000);	
+        
         return this;
     },
     
