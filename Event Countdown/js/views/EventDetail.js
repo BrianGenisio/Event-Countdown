@@ -22,6 +22,7 @@ App.Views.EventDetail = Backbone.View.extend({
     },
     
     render: function() {
+        this.$("#detail-background").attr("src", "images/" + this.model.get('type') + ".jpg");
         this.$("#detail-header").html(this.getHeader());
         this.$("#event-date").html(this.model.get("date"));
         this.$("#days-away").html(this.model.daysAway());

@@ -51,6 +51,9 @@
     <Resource Include="App_Resources\Android\drawable-ldpi\icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\birthday.jpg" />
+    <Content Include="images\holiday.jpg" />
+    <Content Include="images\party.jpg" />
     <Content Include="index.html" />
     <Content Include="jquery-mobile\images\ajax-loader.png" />
     <Content Include="jquery-mobile\images\ajax-loader.gif" />

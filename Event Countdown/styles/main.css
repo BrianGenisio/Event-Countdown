@@ -23,6 +23,30 @@ body
     color: #AAA;
 }
 
+#eventDetail {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#eventDetail .ui-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+}
+
+#eventDetail .detail-background-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#eventDetail #detail-background {
+ 	width: 100%;
+    opacity: 0.1;
+}
+
 #eventDetail .report {
     font-size: 24px;
 }
@@ -31,7 +55,9 @@ body
  	font-weight: bold;   
 }
 
-#event-has-past {
+#eventDetail #event-has-past {
     font-size: 20px;
  	color: #AAA;   
 }
+
+
